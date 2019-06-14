@@ -4,3 +4,9 @@ def test_tables(mongodb):
     assert table['table'] == 'weather'
     assert str(table['_id']) == '59787de7e4b0710ef3d97fb6'
     assert str(table['_id']) != '58787de7e4b0710ef3d97fb6'
+
+
+def test_update(mongodb):
+    mongodb.tables.update({},{'$set':{'f1':'newfield'}})
+    table = mongodb.tables.find_one({})
+    assert table['f1'] == 'newfield'

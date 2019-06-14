@@ -1,0 +1,58 @@
+[{  "_id": {"$oid":"59787de7e4b0710ef3d97fb6"},
+    "table": "weather",
+    "configuration": {
+        "hdfs_relative_path": "/weather",
+        "hive_table_name": "weather",
+        "source_file_properties": {
+            "header_rows_count": 1,
+            "escape_character": "\\",
+            "column_separator": ",",
+            "column_enclosed_by": "\"",
+            "encoding": "UTF-8"
+        },
+        "sync_type": "full-load",
+        "natural_key": [
+            "CITY"
+        ],
+        "exclude_filename_regex": "",
+        "number_of_secondary_partitions": 3,
+        "source_relative_path": "/weather",
+        "ingest_subdirectories": false,
+        "number_of_reducers": 2,
+        "partition_key": [
+            "CITY"
+        ],
+        "source_file_type": "csv"
+    },
+    "columns": [
+        {
+            "sqlType": 93,
+            "type": "timestamp",
+            "name": "ts",
+            "origName": "ts",
+            "format": "yyyy-MM-dd HH:mm:ss.SSS"
+        },
+        {
+            "sqlType": 12,
+            "type": "string",
+            "name": "CITY",
+            "origName": "CITY"
+        },
+        {
+            "sqlType": 4,
+            "type": "int",
+            "name": "TEMP",
+            "origName": "TEMP"
+        },
+        {
+            "sqlType": 12,
+            "type": "string",
+            "name": "COND",
+            "origName": "COND"
+        }
+    ],
+    "hdfs_path": "/iw/data/sources/weather_data/weather",
+    "origTableName": "weather",
+    "createdBy": "6RkfybTRQQByEey3v",
+    "state": "ready"
+}]
